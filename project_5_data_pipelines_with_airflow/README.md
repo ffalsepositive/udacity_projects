@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Sparkify, which is a streaming music start-up, wants to automate their ETL pipeline with airflow.
+Sparkify, which is a streaming music start-up, wants to automate their ETL pipeline with Apache Airflow.
 The data is in S3 Bucket, as log and song data. Datasets are in JSON metadata format.
 In this project, we will automate an ETL pipeline with Airflow. First, we will create the tables on Amazon Redshift, then copy data from S3 Bucket to Amazon Redshift. Then, we will insert the data to Amazon Redshift tables and check the data. Finally, we will run this process every hour.
 
@@ -45,12 +45,12 @@ Sparkify has two different dataset on AWS S3 Bucket: Song & Log Data.
 
 In this project, we used 6 different operators:
 
-- 1. **CreateTablesOperator:** Creates tables if they do not exist.
-- 2. **StageToRedshiftOperator :** Copies the data from S3 Bucket to Amazon Redshift.
-- 3. **LoadFactOperator:** Loads the fact table records to the related fact tables.
-- 4. **LoadDimensionOperator:** Loads the dimension table records to the related dimension tables.
-- 5. **DataQualityOperator:** Check the table has records in the end of the process.
-- 6. **DummyOperator:** Indicates the process has started and completed.
+- **CreateTablesOperator:** Creates tables if they do not exist.
+- **StageToRedshiftOperator :** Copies the data from S3 Bucket to Amazon Redshift.
+- **LoadFactOperator:** Loads the fact table records to the related fact tables.
+- **LoadDimensionOperator:** Loads the dimension table records to the related dimension tables.
+- **DataQualityOperator:** Check the table has records in the end of the process.
+- **DummyOperator:** Indicates the process has started and completed.
 
 The completed DAG is shown in the following figure:
 
@@ -58,8 +58,8 @@ The completed DAG is shown in the following figure:
 
 ## How to Run
 
-- 1. Create an Amazon Redshift Cluster. 
-- 2. On Airflow Interface Page >> Admin >> Connections, create AWS and Redshift connections with the names "aws_credentials" and "redshift". 
-- 3. Run the DAG. On the operation, the tree view will be as the following figure:
+- Create an Amazon Redshift Cluster. 
+- On Airflow Interface Page >> Admin >> Connections, create AWS and Redshift connections with the names "aws_credentials" and "redshift". 
+- Run the DAG. During the operation, the tree view will be as the following figure:
 
 <p align="left"><img src="images/airflow_process.png" style="height: 100%; width: 100%; max-width: 2000px" /></p>
