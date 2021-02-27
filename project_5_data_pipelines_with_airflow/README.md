@@ -62,4 +62,4 @@ The completed DAG is shown in the following figure:
 - On Airflow Interface Page >> Admin >> Connections, create AWS and Redshift connections with the names "aws_credentials" and "redshift". 
 - Run the DAG. During the operation, the tree view will be as the following figure:
 
-<p align="left"><img src="images/airflow_process.png" style="height: 100%; width: 100%; max-width: 2000px" /></p>
+<p align="left"><img src="images/airflow_process.PNG" style="height: 100%; width: 100%; max-width: 2000px" /></p>
