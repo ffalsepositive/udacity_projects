@@ -217,7 +217,7 @@ The DAG Timeline is shown in the figure:
 
 The final data sample is shown below. [Samples](./redshift_final_samples/) can be seen in redshift_final_samples folder.
 
-<p align="left"><img src="images/sample_redshift.png" style="height: 100%; width: 70%; max-width: 2000px" /></p>
+<p align="left"><img src="images/sample_redshift.PNG" style="height: 100%; width: 70%; max-width: 2000px" /></p>
 
 ## Possible Scenarios
 
