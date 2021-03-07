@@ -167,7 +167,7 @@ The processed data is copied to Amazon Redshift. Then, fact and dimension tables
 
 The following schema shows the connection between fact and dimension tables.
 
-<p align="left"><img src="images/fact_dim_figure.png" style="height: 40%; width: 40%" /></p>
+<p align="left"><img src="images/fact_dim_figure.png" style="height: 20%; width: 20%" /></p>
 
 
 
