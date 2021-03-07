@@ -1,4 +1,4 @@
-<img src="images/movies_poster.png" width="1000" height="50" />
+<img src="images/movies_poster.png" width="1000" height="400" />
 
 # Movie Recommendation Data Pipeline
 
@@ -87,7 +87,7 @@ After these processes, the change in the data schema has shown.
 
 
 
-<p align="left"><img src="images/schema_change.png" style="height: 80%; width: 80%" /></p>
+<p align="center"><img src="images/schema_change.png" style="height: 80%; width: 80%" /></p>
 
 
 
