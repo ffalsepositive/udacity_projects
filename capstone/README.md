@@ -39,7 +39,7 @@ In the analysis process, the raw data in CSV format is read from Amazon S3 bucke
 
 In the scheduling process, the processed data in PARQUET format is read from Amazon S3 and staged onto Amazon Redshift PostGreSQL as database tables. Fact and Dimension tables are created on Amazon Redshift and this process is scheduled by Apache Airflow. The following figure shows the process.
 
-<p align="center"><img src="images/scheduling_process.png" style="height: 80%; width: 80%" /></p>
+<p align="center"><img src="images/scheduling_process.png" style="height: 100%; width: 100%" /></p>
 
 ## Data Analysis
 
@@ -47,7 +47,7 @@ In the scheduling process, the processed data in PARQUET format is read from Ama
 
 The content of the data can be examined in [Kaggle Webpage](https://www.kaggle.com/rounakbanik/the-movies-dataset). Sample date is shown below (Transposed).
 
-<p align="center"><img src="images/movies_sample_data.png" style="height: 80%; width: 70%" /></p>
+<p align="left"><img src="images/movies_sample_data.png" style="height: 80%; width: 70%" /></p>
 
 ##### Original Columns
 
@@ -207,11 +207,11 @@ The completed DAG is shown in the following figure:
 - On Airflow Interface Page >> Admin >> Connections, create AWS and Redshift connections with the names "aws_credentials" and "redshift". 
 - Run the DAG. During the operation, the tree view will be as the following figure:
 
-<p align="left"><img src="images/airflow_process.png" style="height: 100%; width: 70%; max-width: 2000px" /></p>
+<p align="left"><img src="images/airflow_process.png" style="height: 100%; width: 100%; max-width: 2000px" /></p>
 
 The DAG Timeline is shown in the figure:
 
-<p align="left"><img src="images/airflow_times.png" style="height: 100%; width: 70%; max-width: 2000px" /></p>
+<p align="left"><img src="images/airflow_times.png" style="height: 100%; width: 100%; max-width: 2000px" /></p>
 
 ##### Final Sample on Redshift
 
@@ -221,8 +221,8 @@ The final data sample is shown below. [Samples](./redshift_final_samples/) can b
 
 ## Possible Scenarios
 
-** If the data was increased by 100x :** Then, all the process should be run on EMR Cluster by using Apache Spark. Actually, fact and dimension tables can also be created on Spark due to save Amazon Redshift and Amazon S3 storage.
+- **If the data was increased by 100x :** Then, all the process should be run on EMR Cluster by using Apache Spark. Actually, fact and dimension tables can also be created on Spark due to save Amazon Redshift and Amazon S3 storage.
 
-** If the pipelines were run on a daily basis by 7am: ** Then, schedule interval should be change to daily.
+- **If the pipelines were run on a daily basis by 7am:** Then, schedule interval should be change to daily.
 
-** If the database needed to be accessed by 100+ people:** There are two ways: First, carrying all the process to Spark and loading only fact and dimension tables. Second, scaling up the Amazon Redshift clusters. 
+- **If the database needed to be accessed by 100+ people:** There are two ways: First, carrying all the process to Spark and loading only fact and dimension tables. Second, scaling up the Amazon Redshift clusters. 
