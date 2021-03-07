@@ -33,13 +33,13 @@ The pipeline consists of two steps: Analysis and Scheduling.
 
 In the analysis process, the raw data in CSV format is read from Amazon S3 bucket on the Spark cluster running on Amazon EMR. Then, the data is cleaned, analyzed and required information is extracted. The analysis details can be seen in [spark](./spark) folder. After this step, six tables are stored in PARQUET format in Amazon S3 bucket. Analysis architecture is shown in the figure below.
 
-<p align="left"><img src="images/analysis_process.png" style="height: 80%; width: 70%" /></p>
+<p align="center"><img src="images/analysis_process.png" style="height: 80%; width: 80%" /></p>
 
 #### Scheduling
 
 In the scheduling process, the processed data in PARQUET format is read from Amazon S3 and staged onto Amazon Redshift PostGreSQL as database tables. Fact and Dimension tables are created on Amazon Redshift and this process is scheduled by Apache Airflow. The following figure shows the process.
 
-<p align="left"><img src="images/scheduling_process.png" style="height: 80%; width: 60%" /></p>
+<p align="center"><img src="images/scheduling_process.png" style="height: 80%; width: 80%" /></p>
 
 ## Data Analysis
 
@@ -47,7 +47,7 @@ In the scheduling process, the processed data in PARQUET format is read from Ama
 
 The content of the data can be examined in [Kaggle Webpage](https://www.kaggle.com/rounakbanik/the-movies-dataset). Sample date is shown below (Transposed).
 
-<p align="left"><img src="images/movies_sample_data.png" style="height: 80%; width: 70%" /></p>
+<p align="center"><img src="images/movies_sample_data.png" style="height: 80%; width: 70%" /></p>
 
 ##### Original Columns
 
@@ -60,14 +60,14 @@ The schema of the movies dataset consists of string values. There are lots of ir
 
 The following table shows the processes applied to the data for corresponding column.
 
-<p align="left"><img src="images/movies_table_process.png" style="height: 80%; width: 100%" /></p>
+<p align="center"><img src="images/movies_table_process.png" style="height: 80%; width: 100%" /></p>
 
 ##### Derived Columns
 
 There are six columns derived from the original columns. Explanation of these columns are shown in the figure.
 
 
-<p align="left"><img src="images/movies_derived_columns.png" style="height: 80%; width: 100%" /></p>
+<p align="center"><img src="images/movies_derived_columns.png" style="height: 80%; width: 100%" /></p>
 
 
 
@@ -94,7 +94,7 @@ After these processes, the change in the data schema has shown.
 
 ### Ratings
 
-The content of the data can be examined in [Kaggle Webpage](https://www.kaggle.com/rounakbanik/the-movies-dataset). Sample date is shown below.
+The content of the data can be examined in [Kaggle Webpage](https://www.kaggle.com/rounakbanik/the-movies-dataset). Sample data is shown below.
 
 
 
@@ -117,14 +117,14 @@ The schema of the ratings dataset is inherited. There are only four columns in t
 There are three columns derived from the original columns. Explanation of these columns are shown in the figure.
 
 
-<p align="left"><img src="images/ratings_derived_columns.png" style="height: 80%; width: 70%" /></p>
+<p align="center"><img src="images/ratings_derived_columns.png" style="height: 80%; width: 70%" /></p>
 
 
 
 After these processes, the change in the data schema has shown. 
 
 
-<p align="left"><img src="images/schema_change2.png" style="height: 80%; width: 80%" /></p>
+<p align="center"><img src="images/schema_change2.png" style="height: 80%; width: 80%" /></p>
 
 
 
@@ -221,8 +221,8 @@ The final data sample is shown below. [Samples](./redshift_final_samples/) can b
 
 ## Possible Scenarios
 
-- ** If the data was increased by 100x :** Then, all the process should be run on EMR Cluster by using Apache Spark. Actually, fact and dimension tables can also be created on Spark due to save Amazon Redshift and Amazon S3 storage.
+** If the data was increased by 100x :** Then, all the process should be run on EMR Cluster by using Apache Spark. Actually, fact and dimension tables can also be created on Spark due to save Amazon Redshift and Amazon S3 storage.
 
-- ** If the pipelines were run on a daily basis by 7am: ** Then, schedule interval should be change to daily.
+** If the pipelines were run on a daily basis by 7am: ** Then, schedule interval should be change to daily.
 
-- ** If the database needed to be accessed by 100+ people:** There are two ways: First, carrying all the process to Spark and loading only fact and dimension tables. Second, scaling up the Amazon Redshift clusters. 
+** If the database needed to be accessed by 100+ people:** There are two ways: First, carrying all the process to Spark and loading only fact and dimension tables. Second, scaling up the Amazon Redshift clusters. 
