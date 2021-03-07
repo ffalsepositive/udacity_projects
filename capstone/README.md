@@ -195,7 +195,7 @@ In this project, we used 6 different operators:
 
 The completed DAG is shown in the following figure:
 
-<p align="left"><img src="images/airflow_graph.png" style="height: 100%; width: 100%; max-width: 2000px" /></p>
+<p align="center"><img src="images/airflow_graph.png" style="height: 100%; width: 150%; max-width: 2000px" /></p>
 
 ## How to Run
 
@@ -207,7 +207,7 @@ The completed DAG is shown in the following figure:
 - On Airflow Interface Page >> Admin >> Connections, create AWS and Redshift connections with the names "aws_credentials" and "redshift". 
 - Run the DAG. During the operation, the tree view will be as the following figure:
 
-<p align="left"><img src="images/airflow_process.png" style="height: 100%; width: 100%; max-width: 2000px" /></p>
+<p align="center"><img src="images/airflow_process.png" style="height: 100%; width: 100%; max-width: 2000px" /></p>
 
 The DAG Timeline is shown in the figure:
 
@@ -217,7 +217,7 @@ The DAG Timeline is shown in the figure:
 
 The final data sample is shown below. [Samples](./redshift_final_samples/) can be seen in redshift_final_samples folder.
 
-<p align="left"><img src="images/sample_redshift.PNG" style="height: 100%; width: 70%; max-width: 2000px" /></p>
+<p align="center"><img src="images/sample_redshift.PNG" style="height: 100%; width: 100%; max-width: 2000px" /></p>
 
 ## Possible Scenarios
 
