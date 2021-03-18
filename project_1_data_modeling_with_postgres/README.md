@@ -1,4 +1,6 @@
-### To Get Started
+# Data Modeling with PostGreSQL
+
+### Introduction
 
 Sparkify is a company providing streaming music through the application. The data they've been collecting on songs and user activity is available in JSON format. As the data size increases, to query and analyze the data becomes more difficult. The aim of this project is to create a database schema and ETL pipeline for processing and analyzing the data.
 
