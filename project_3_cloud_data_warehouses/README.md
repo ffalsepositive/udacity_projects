@@ -1,4 +1,4 @@
-# Project Data Warehouse
+# Cloud Data Warehouses on AWS
 
 ## Introduction
 
