@@ -46,7 +46,7 @@ In this project, several libraries are used:
 - **pandas:** Used for data operations
 - **sql_queries:** Custom file. Used for SQL query operations.
 
-### Usage
+### How to Run
 
 1. Run the terminal.
 2. In the terminal, run **python create_tables.py** to drop existing tables and create new ones.
