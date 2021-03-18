@@ -12,7 +12,7 @@ Sparkify has two different dataset on AWS S3 Bucket: Song & Log Data.
 
 ### Song Dataset 
 
-This dataset is a small sample of real data from Million Song Dataset[1]. The files are in JSON format and contains song, artist and duration info.
+This dataset is a small sample of real data from [Million Song Dataset](http://millionsongdataset.com/). The files are in JSON format and contains song, artist and duration info.
 
 ### Log Dataset
 
@@ -44,7 +44,7 @@ All the queries are stored in _query_files_ folder. The folder consists of three
 **Time** : Contains time info.
 - **Table Columns :** start_time, hour, day, week, month, year, weekday
   
-## How to run
+## How to Run
 
 1. Fill the AWS Field in the __dwh.cfg__ file.
 2. Run __create_cluster.py__ by using the information in __dwh.cfg__. 
@@ -52,5 +52,3 @@ All the queries are stored in _query_files_ folder. The folder consists of three
 4. Copy these information and paste it into the related fields in __dwh.cfg__.
 5. Run __create_tables.py__ in order to create tables on Redshift Cluster.
 6. Run __etl.py__ to copy data from S3 Bucket to Redshift Cluster.
-
-[1] http://millionsongdataset.com/
