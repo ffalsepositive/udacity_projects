@@ -1,6 +1,6 @@
-# Data Pipelines with Airflow
+# Data Pipelines with Apache Airflow
 
-<p align="left"><img src="images/airflow_logo.png" style="height: 50%; width: 50%; max-width: 1000px" /></p>
+<p align="left"><img src="images/airflow_logo.png" style="height: 50%; width: 50%; max-width: 600px" /></p>
 
 ## Introduction
 
