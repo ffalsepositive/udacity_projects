@@ -1,4 +1,4 @@
-# Project Data Lake
+# Data Lakes with Apache Spark & AWS EMR
 
 ## Introduction
 
@@ -32,7 +32,7 @@ Sparkify has two different dataset on AWS S3 Bucket: Song & Log Data.
 | users      | user_id, first_name, last_name, gender, level                                                 | Dimension    | Contains user info.                                         |
 | time       | start_time, hour, day, week, month, year, weekday                                             | Dimension    | Contains time info.                                         |
   
-## How to run
+## How to Run
 
 1. Fill the AWS Credentials Field in the __dl.cfg__ file with credentials that have S3 read&write access.
 2. Fill the S3 Field in the __dl.cfg__ file with input and output S3 bucket path.
